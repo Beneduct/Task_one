@@ -3,18 +3,42 @@
 
 #include <iostream>
 #include <C:/Users/Beneduct/Tasks/Task_one/Task1/nlohmann/json.hpp>
-int main()
-{
-    std::cout << "Hello World!\n";
+
+using namespace std;
+
+bool check_json(string path) {
+
+    return true;
 }
 
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
 
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
+
+int main()
+{
+    string path;
+    cout << "Enter the path to the file being checked\n";
+    cin >> path; //Test path C:\Users\Beneduct\Tasks\Task_one
+
+    if (path.empty())
+    {
+        cout << "path is empty";
+        return 0;
+    }
+
+    for (int i = 0; i < path.length(); i++) {
+        int index = path.find(92);
+        if (index + 1 == 0)
+            break;
+
+        path.replace(index, 1, "/");
+    }
+
+    bool answer = check_json(path);
+
+    if (answer)
+        cout << answer << " File is correct";
+    else
+        cout << answer << " File is't correct";
+
+    return 0;
+}
