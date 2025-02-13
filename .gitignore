@@ -1,3 +1,8 @@
-/Task1/.vs
+Task1/.vs/
 *.tmp
-*.swp
+*.swpTask1/.vs/
+Task1/Task1.sln
+Task1/Task1.vcxproj
+Task1/Task1.vcxproj.filters
+Task1/Task1.vcxproj.filters Task1/Task1.vcxproj.user
+Task1/Task1.vcxproj.user
